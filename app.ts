@@ -26,7 +26,7 @@ interface WeatherData {
   
   async function checkWeather(city: string) {
     try {
-      const apiKey = "3134404e374899e664aa674e60e3e95d";
+      const apiKey = "paste your api key here"; //attention: you have to put your api key in here
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   
       const response = await fetch(url);

@@ -20,7 +20,7 @@ const weatherBody = document.querySelector(".weather-body");
 function checkWeather(city) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const apiKey = "3134404e374899e664aa674e60e3e95d";
+            const apiKey = "paste your api key here"; //attention: you have to put your api key in here
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
             const response = yield fetch(url);
             const weatherData = yield response.json();
@@ -61,19 +61,19 @@ function setWeatherImage(weatherData) {
     const weatherMain = (_b = (_a = weatherData.weather) === null || _a === void 0 ? void 0 : _a[0].main) !== null && _b !== void 0 ? _b : null;
     switch (weatherMain) {
         case "Clouds":
-            weatherImg.src = "/images/cloud.png";
+            weatherImg.src = "./images/cloud.png";
             break;
         case "Clear":
-            weatherImg.src = "/images/clear.png";
+            weatherImg.src = "./images/clear.png";
             break;
         case "Rain":
-            weatherImg.src = "/images/rain.png";
+            weatherImg.src = "./images/rain.png";
             break;
         case "Mist":
-            weatherImg.src = "/images/mist.png";
+            weatherImg.src = "./images/mist.png";
             break;
         case "Snow":
-            weatherImg.src = "/assets/snow.png";
+            weatherImg.src = "./assets/snow.png";
             break;
         default:
             weatherImg.src = ""; // Set a default image or leave it empty based on your design
